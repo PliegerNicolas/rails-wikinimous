@@ -12,7 +12,7 @@
         <%= link_to edit_article_path(@article.id) do %>
           <i class="fa fa-recycle click-icon"></i>
         <% end %>
-        <%= link_to article_path(@article.id), method: :delete do %>
+        <%= link_to article_path(@article.id), method: :delete, data: { confirm: "Delete #{@article.title}?" } do %>
           <i class="fa fa-trash click-icon"></i>
         <% end %>
       </div>
