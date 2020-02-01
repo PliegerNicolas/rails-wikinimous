@@ -1,0 +1,282 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'font-awesome';
+
+/* HEADER */
+
+$logo-green: #74cf83;
+$box-background-color: #fcfcfc;
+$background-color: #faf5f5;
+$title-shadow-color: #4c9157;
+
+body {
+  margin: 0;
+  background-color: $background-color;
+  overflow-y: scroll;
+}
+
+hr {
+  opacity: 0.2;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $box-background-color;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 1px 1px 4px 0px rgba(60,60,60,0.12);
+}
+
+.header-content {
+  margin: 0 15px;
+  a {
+    color: $title-shadow-color;
+    opacity: 0.5;
+    transition: 0.6s;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  a:hover {
+    color: $logo-green;
+    opacity: 1;
+    transition: 0.4s;
+    text-shadow: -1px -1px $title-shadow-color;
+  }
+}
+
+.title {
+  color: $logo-green;
+  text-transform: capitalize;
+  text-shadow: -1px -1px $title-shadow-color;
+  a {
+    font-size: 32px;
+  }
+}
+
+.fa-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ebebeb;
+  opacity: 0.8;
+  font-size: 36px;
+  color: $title-shadow-color;
+  border-radius:50%;
+  height: 44px;
+  width: 44px;
+  box-shadow: 1px 1px 1px 3px $logo-green;
+}
+
+.header-text-size-box {
+  width: 400px;
+}
+/* Index */
+
+.page-content {
+  width: 800px;
+  margin: 50px auto;
+}
+
+#article-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.article {
+  margin: 15px 0;
+}
+
+.li-article,.article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #343e45;
+  font-size: 18px;
+  font-style: italic;
+  transition: 0.8s;
+  opacity: 0.85;
+  &:hover {
+    color: #145949;
+    transition: 0.4s;
+    opacity: 0.88;
+  }
+}
+
+.article-title {
+  margin: 0 8px;
+  color: $title-shadow-color;
+  opacity: 0.8;
+  transition: 1.2s;
+  text-decoration: none;
+  font-size: 32px;
+  opacity: 1;
+  &:hover {
+    color: $logo-green;
+    opacity: 1;
+    transition: 0.4s;
+    text-shadow: -.4px -.4px $title-shadow-color;
+  }
+}
+
+.article-content {
+  text-align: left;
+  margin: 5px 20px;
+}
+
+/* Show */
+
+.click-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  a {
+    text-decoration: none;
+  }
+  .click-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #60cc71;
+    color: $title-shadow-color;
+    transition: 0.8s;
+    margin: 0 15px;
+    box-shadow: 1px 1px 4px 0px rgba(60,60,60,0.22);
+    &:hover {
+      color: #21eb4c;
+      transition: 0.4s;
+    }
+  }
+}
+
+.article-title-show {
+ margin: 0 8px;
+ color: $title-shadow-color;
+ opacity: 0.8;
+ text-decoration: none;
+ font-size: 32px;
+ opacity: 1;
+ text-align: center;
+}
+
+.show-article-content {
+  margin: 40px 35px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.back-to-articles-button {
+  margin: 25px 15px;
+  a {
+    color: $title-shadow-color;
+    opacity: 0.6;
+    transition: 0.6s;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  a:hover {
+    color: $logo-green;
+    opacity: 0.8;
+    transition: 0.4s;
+  }
+}
+
+/* Form */
+
+$text-box-color: #f5f4f0;
+
+textarea {
+  width: 88%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: $text-box-color;
+  resize: none;
+}
+
+input[type=text] {
+  width: 78%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: $text-box-color;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 600px;
+  textarea,[type="text"] {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+}
+
+.form-button {
+  margin: 10px 10px;
+  padding: 8px 12px;
+  color: $title-shadow-color;
+  border: 1px solid #E2E4F0;
+  background-color: $background-color;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: 1s;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
+  &:hover {
+    background-color: $logo-green;
+    opacity: .9;
+    transition: 0.6s;
+    border-color: $title-shadow-color;
+    color: $box-background-color;
+  }
+}
+
+.back-to-button-create {
+  margin: 0 0;
+  a {
+    color: $title-shadow-color;
+    opacity: 0.6;
+    transition: 0.6s;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  a:hover {
+    color: $logo-green;
+    opacity: 0.8;
+    transition: 0.4s;
+  }
+}

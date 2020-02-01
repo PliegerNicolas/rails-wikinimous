@@ -1,0 +1,27 @@
+<div class="page">
+  <div class="header">
+    <h1 class="header-content title header-text-size-box"><%= link_to 'Wikinimous',articles_path %></h1>
+    <i class="fa fa-book header-content"></i>
+    <p class="header-content header-text-size-box"><%= link_to 'New article',new_article_path%></p>
+  </div>
+
+  <div class="page-content">
+    <div class="micro-header">
+      <h1 class="article-title-show"><%= @article.title %></h1>
+      <div class="click-icons">
+        <%= link_to edit_article_path(@article.id) do %>
+          <i class="fa fa-recycle click-icon"></i>
+        <% end %>
+        <%= link_to article_path(@article.id), method: :delete do %>
+          <i class="fa fa-trash click-icon"></i>
+        <% end %>
+      </div>
+    </div>
+    <hr>
+    <div class="show-content">
+      <p class="show-article-content"><%= @article.content %></p>
+    </div>
+    <hr>
+    <p class="back-to-articles-button"><%= link_to 'Back to our articles',articles_path %></p>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+
+<%= form_for(@article) do |f| %>
+  <div class="container form">
+    <div class="form-group article-title-show">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="form-group article-title-show">
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+    </div>
+    <%= f.submit class: "form-button" %>
+  </div>
+<% end %>
+

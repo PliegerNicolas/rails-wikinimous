@@ -1,0 +1,12 @@
+<div class="page">
+  <div class="header">
+    <h1 class="header-content title header-text-size-box"><%= link_to 'Wikinimous',articles_path %></h1>
+    <i class="fa fa-book header-content"></i>
+    <p class="header-content header-text-size-box"><%= link_to 'New article',new_article_path%></p>
+  </div>
+
+  <div class="page-content">
+    <%= render 'form', article: @article %>
+  </div>
+    <p class="back-to-button-create"><%= link_to 'Back to the article page',article_path %></p>
+</div>
